@@ -27,7 +27,6 @@ def home():
 @app.route("/predict", methods=['POST'])
 def predict():
     """Performs an sklearn prediction
-
     input looks like:
             {
     "CHAS":{
@@ -48,10 +47,8 @@ def predict():
     "LSTAT":{
        "0":4.98
     }
-
     result looks like:
     { "prediction": [ 20.35373177134412 ] }
-
     """
 
     try:
