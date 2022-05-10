@@ -12,7 +12,7 @@
 
 
 ## Architectural Diagram
-![](images/0_architecture.png)
+![](images/diagram.png)
 
 ## Project cloned into Azure Cloud Shell
 * Go to https://portal.azure.com/#cloudshell/ and run command:
@@ -90,9 +90,15 @@ jobs:
 ![](images/6_Github_action.png)
 ## Configure Azure Pipeline
 [Note the official documentation should be referred to and double checked asyou setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelinesecosystems/python-webapp?view=azure-devops).
-
+Successful deploy of the project in Azure Pipelines.
+![](images/7_azure_devops_pipeline_successful_deployment.png)
+![](images/7_azure_devops_pipeline_successful_deployment_2.png)
+* Logs from your running application here:
+```
+https://udacity-azure-course2.scm.azurewebsites.net/api/logs/docker
+```
 * Running Azure App Service from Azure Pipelines automatic deployment
-
+![](images/8_Azure_Pipelines_automatic_deployment.png)
 * Successful prediction from deployed flask app in Azure Cloud Shell.  [Use this file as a template for the deployed prediction](https://github.com/udacity/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C2-AgileDevelopmentwithAzure/project/starter_files/flask-sklearn/make_predict_azure_app.sh).
 The output should look similar to this:
 
@@ -101,17 +107,21 @@ The output should look similar to this:
 Port: 443
 {"prediction":[20.35373177134412]
 ```
-
+![](images/9_make_predict_azure_app.png)
 * Output of streamed log files from deployed application
 
-> 
+Go to https://portal.azure.com/ -> App Service -> Select app -> In tab Monitoring -> Log stream
+![](images/10_log_streams.png)
 
+Or using command to display the logs of the server:
+```
+az webapp log tail -g trivl_rg_1166 -n udacity-azure-course2
+```
+![](images/11_command_log_streams.png)
 ## Enhancements
 
-<TODO: A short description of how to improve the project in the future>
+Improve error handling and tesing, In the future i will implement [Locust](https://locust.io/)
 
 ## Demo 
-
-<TODO: Add link Screencast on YouTube>
 
 
