@@ -1,4 +1,5 @@
-![Python application test with Github Actions](https://github.com/voletri/udacity-azure-course2/actions/workflows/main.yml/badge.svg)
+[![Python application test with Github Actions](https://github.com/voletri/udacity-azure-course2/actions/workflows/main.yml/badge.svg)](https://github.com/voletri/udacity-azure-course2/actions/workflows/main.yml)
+
 
 # Overview
 
@@ -142,4 +143,4 @@ Improve error handling and tesing
 
 ## Demo 
 
-https://youtu.be/gJpjvD2NuaM
+Youtube demo link: https://youtu.be/gJpjvD2NuaM
