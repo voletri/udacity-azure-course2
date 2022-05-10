@@ -1,12 +1,16 @@
 # Overview
 
-<TODO: complete this with an overview of your project>
+This is the second project of Udacity Cloud DevOps Engineer using Azure Nanodegree.
 
 # Project Plan
 <TODO: Project Plan
 
-* A link to a Trello board for the project
-* A link to a spreadsheet that includes the original and final project plan>
+* A link to a Trello board for the project:
+
+https://trello.com/b/mkRe5Rne/udacity-azure-course2
+* A link to a spreadsheet that includes the original and final project plan:
+
+https://docs.google.com/spreadsheets/d/1Q3iyPWt2bHowQ76-PuupFn5tF3dBx7mrWktgoqO_E2I/edit?usp=sharing
 
 # Instructions
 
