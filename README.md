@@ -3,7 +3,6 @@
 This is the second project of Udacity Cloud DevOps Engineer using Azure Nanodegree.
 
 # Project Plan
-<TODO: Project Plan
 
 * A link to a Trello board for the project:
 
@@ -93,7 +92,7 @@ jobs:
 ```
 ![](images/6_Github_action.png)
 ## Configure Azure Pipeline
-[Note the official documentation should be referred to and double checked asyou setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelinesecosystems/python-webapp?view=azure-devops).
+[Note the official documentation should be referred to and double checked asyou setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
 Successful deploy of the project in Azure Pipelines.
 ![](images/7_azure_devops_pipeline_successful_deployment.png)
 ![](images/7_azure_devops_pipeline_successful_deployment_2.png)
@@ -122,11 +121,9 @@ Or using command to display the logs of the server:
 az webapp log tail -g trivl_rg_1166 -n udacity-azure-course2
 ```
 ![](images/11_command_log_streams.png)
-## Enhancements
-
-Improve error handling and tesing, i will implement [Locust](https://locust.io/)
 
 * Output of locust
+I will implement [Locust](https://locust.io/)
 
 Create file `locustfile.py`
 
@@ -135,6 +132,12 @@ Using command start a local service in your environment, default port is 8089
 locust -f locustfile.py
 ```
 ![](images/12_locust.png)
+
+## Enhancements
+
+Improve error handling and tesing
+
+
 ## Demo 
 
-
+https://youtu.be/gJpjvD2NuaM
