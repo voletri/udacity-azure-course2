@@ -14,15 +14,6 @@
 ## Architectural Diagram
 ![](images/0_architecture.png)
 
-## Project running on Azure App Service
-* Go to https://portal.azure.com/#cloudshell/
-* Run command to create webapp:
-```
-az webapp up -g Azuredevops -n udacity-azure-course2 -l eastus --sku B1
-```
-* Confirm webapp is created successfully
-![](images/1_create_webapp.png)
-
 ## Project cloned into Azure Cloud Shell
 * Go to https://portal.azure.com/#cloudshell/ and run command:
 ```
@@ -48,9 +39,57 @@ cd udacity-azure-course2
 make all
 ```
 ![](images/3_make_all.png)
-* Output of a test run
+* The following commands can be run in order to then test and start the application:
+```
+export FLASK_APP=app.py
+flask run
+```
+![](images/4_app_running_locally.png)
+## Project running on Azure App Service
+* Go to https://portal.azure.com/#cloudshell/
+* Run command to create webapp:
+```
+az webapp up --sku F1 -n udacity-azure-course2
+```
+* Confirm webapp is created successfully
+![](images/1_create_webapp.png)
 
-* Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
+    Confirm app is up and running
+    ```
+    https://udacity-azure-course2.azurewebsites.net
+    ```
+![](images/5_app_running.png)
+## Configure GitHub Actions
+* GitHub > Actions > set up a workflow yourself
+```
+name: Python application test with Github Actions
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.7
+    - name: Install dependencies
+      run: |
+        make install
+    - name: Lint with pylint
+      run: |
+        make lint
+    - name: Test with pytest
+      run: |
+        make test
+```
+![](images/6_Github_action.png)
+## Configure Azure Pipeline
+[Note the official documentation should be referred to and double checked asyou setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelinesecosystems/python-webapp?view=azure-devops).
 
 * Running Azure App Service from Azure Pipelines automatic deployment
 
@@ -58,9 +97,9 @@ make all
 The output should look similar to this:
 
 ```bash
-udacity@Azure:~$ ./make_predict_azure_app.sh
+(.udacity-azure-course2) tri@Azure:~/udacity-azure-course2$ sh make_predict_azure_app.sh
 Port: 443
-{"prediction":[20.35373177134412]}
+{"prediction":[20.35373177134412]
 ```
 
 * Output of streamed log files from deployed application
