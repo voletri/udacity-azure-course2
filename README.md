@@ -1,3 +1,5 @@
+![Python application test with Github Actions](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+
 # Overview
 
 This is the second project of Udacity Cloud DevOps Engineer using Azure Nanodegree.
