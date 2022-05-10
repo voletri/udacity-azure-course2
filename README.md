@@ -1,4 +1,4 @@
-![Python application test with Github Actions](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+![Python application test with Github Actions](https://github.com/voletri/udacity-azure-course2/actions/workflows/main.yml/badge.svg)
 
 # Overview
 
