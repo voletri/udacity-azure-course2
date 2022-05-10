@@ -124,8 +124,17 @@ az webapp log tail -g trivl_rg_1166 -n udacity-azure-course2
 ![](images/11_command_log_streams.png)
 ## Enhancements
 
-Improve error handling and tesing, In the future i will implement [Locust](https://locust.io/)
+Improve error handling and tesing, i will implement [Locust](https://locust.io/)
 
+* Output of locust
+
+Create file `locustfile.py`
+
+Using command start a local service in your environment, default port is 8089
+```
+locust -f locustfile.py
+```
+![](images/12_locust.png)
 ## Demo 
 
 
