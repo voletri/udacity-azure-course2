@@ -140,8 +140,8 @@ locust -f locustfile.py
 
 * Improve error handling and tesing
 * Add new pytest tests in the Makefile
-* Stup different environments (DEV, Production)
+* Setup different environments (DEV, Production)
 
 ## Demo 
 
-Youtube demo link: https://youtu.be/gJpjvD2NuaM
+Youtube demo link: https://youtu.be/B52y8BWTuRg
